@@ -26,7 +26,7 @@ function FiltersAndSettings({ pageFiltered }) {
 
   return (
     <table className="flex flex-col text-[var(--color-text)]">
-      <thead className="mb-2">
+      <thead className="ml-3 mr-3 mb-2">
         <tr className="grid grid-cols-7 justify-items-center gap-5 rounded-lg border-2 bg-[var(--color6)] p-2">
           <th className="whitespace-nowrap">
             <div className="flex flex-row">ID</div>

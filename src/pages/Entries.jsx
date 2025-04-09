@@ -55,7 +55,7 @@ function Entries() {
           <Spinner />
         </div>
       )}
-      <div className="mb-3 flex flex-row justify-end">
+      <div className="mb-6 mr-3 mt-5 flex flex-row justify-end">
         {newEntryModalOpen && <NewEntryForm />}
         {filterModalOpen && <AdvancedFilters minDate={minDate} />}
 
@@ -163,7 +163,7 @@ function Entries() {
       </div>
       <FiltersAndSettings pageFiltered={entryList} />
       <Pagination count={count} />
-      <div className="flex justify-end">
+      <div className="flex justify-end mt-3 mr-3">
         {entryList.length > 0 && (
           <CSVLink
             className="rounded-lg bg-[var(--color1)] p-1"

@@ -31,7 +31,7 @@ function Stats() {
   );
 
   const today = new Date();
-  const currentHour = today.getHours();
+  // const currentHour = today.getHours();
   let message, emoji;
   const dateFiltered =
     dashboardDate1 === "" || dashboardDate2 === ""
@@ -41,16 +41,16 @@ function Stats() {
             entry.date >= dashboardDate1 && entry.date <= dashboardDate2,
         );
 
-  if (currentHour < 12) {
-    message = "Good Morning";
-    emoji = "☀️";
-  } else if (currentHour < 18) {
-    message = "Good Afternoon";
-    emoji = "🕐";
-  } else {
-    message = "Good Evening";
-    emoji = "🌙";
-  }
+  // if (currentHour < 12) {
+  //   message = "Good Morning";
+  //   emoji = "☀️";
+  // } else if (currentHour < 18) {
+  //   message = "Good Afternoon";
+  //   emoji = "🕐";
+  // } else {
+  //   message = "Good Evening";
+  //   emoji = "🌙";
+  // }
 
   const highestExpense =
     dateFiltered.length > 0
@@ -104,12 +104,6 @@ function Stats() {
           <Spinner />
         </div>
       )}
-      <p>
-        {user?.user_metadata?.fullName
-          ? ` ${message} ${user?.user_metadata?.fullName}
-        ${emoji}`
-          : ` ${message} ${emoji}`}
-      </p>
       <div className="mt-5 flex flex-row gap-5">
         <span>Specific Date</span>
         <input

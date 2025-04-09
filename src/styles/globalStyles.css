@@ -94,14 +94,14 @@ input[type="number"] {
     --color10: #ffffff; */
     --color1: #4c79a6;
     --color2: #366f95;
-    --color3: #2c6584;
-    --color4: #215c74;
+    --color3: #4bcd3e;
+    --color4: rgba(10, 25, 50);
     --color5: #194f64;
-    --color6: #15444f;
-    --color7: #123c47;
-    --color8: #0f3340;
+    --color6: #2a6f8c;
+    --color7: #4bcd3e;  /*dashboard boxes*/
+    --color8: rgba(10, 25, 50);
     --color9: #0c2a38;
-    --color10: #0a1f31;
+    --color10: #4bcd3e;
     --color-text: #ffffff;
     --color-background: #000000;
   }

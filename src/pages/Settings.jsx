@@ -62,7 +62,7 @@ function Settings() {
           <Spinner />
         </div>
       )}
-      <div className="relative flex flex-col">
+      {/* <div className="relative flex flex-col">
         <img
           src={user?.user_metadata?.avatar || "userlogo.png"}
           className="h-44 w-44 self-center rounded-full bg-[var(--color10)]"
@@ -79,9 +79,9 @@ function Settings() {
           disabled={isUpdating || isPending}
           className="absolute right-[40%] bottom-1 h-8 w-8 rounded-2xl opacity-0"
         />
-      </div>
+      </div> */}
 
-      <div className="flex flex-row">
+      {/* <div className="flex flex-row">
         <label className="mr-3 font-bold">FullName</label>
 
         <input
@@ -188,12 +188,12 @@ function Settings() {
         ) : (
           <HiPencil onClick={() => dispatch(editPassword(true))} />
         )}
-      </div>
+      </div> */}
       <div>
-        <div className="flex flex-row">
-          <p className="font-bold">Add new Category</p>
+        <div className="flex flex-row mt-5">
+          <p className="font-bold text-white mb-3">Add new Category</p>
           <HiPlusCircle
-            className="mt-1"
+            className="mt-2 ml-2 text-white"
             onClick={() => {
               if (categories.length === 10) return;
 
@@ -223,7 +223,7 @@ function Settings() {
         </div>
       </div>
 
-      <div className="mt-1">
+      {/* <div className="mt-1">
         <div className="mr-1 flex flex-row gap-1 font-bold">
           {isDarkMode ? "Light Mode" : "Dark Mode"}
 
@@ -233,7 +233,7 @@ function Settings() {
             <HiMoon className="h-9 w-8" onClick={() => setIsDarkMode(true)} />
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

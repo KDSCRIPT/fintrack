@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { HiListBullet, HiSparkles } from "react-icons/hi2";
+import { HiArrowRightEndOnRectangle, HiListBullet, HiSparkles } from "react-icons/hi2";
 import { HiOutlineHome } from "react-icons/hi2";
 import { HiCog6Tooth } from "react-icons/hi2";
-
+import { useLogout } from "../hooks/auth/useLogout";
+import { HiArrowsRightLeft } from "react-icons/hi2";
 function Navlinks() {
+  const { logout, isPending } = useLogout();
   return (
-    <div className="flex w-80 flex-col text-[var(--color-text)]">
-      <nav className="flex flex-col gap-5">
+    <div className="flex flex-row text-[var(--color-text)]">
+      <nav className="flex flex-row gap-2">
         <NavLink
           to="/dashboard"
           className={({ isActive }) =>
@@ -15,8 +17,8 @@ function Navlinks() {
               : "flex flex-row"
           }
         >
-          <HiOutlineHome className="h-14 w-10 text-[var(--color9)]" />
-          <span className="mt-1 text-3xl">Dashboard</span>
+          <HiOutlineHome className="h-12 w-8 text-[var(--color4)] mr-2" />
+          {/* <span className="mt-1 text-2xl">Dashboard</span> */}
         </NavLink>
 
         <NavLink
@@ -27,8 +29,8 @@ function Navlinks() {
               : "flex flex-row"
           }
         >
-          <HiListBullet className="h-14 w-10 text-[var(--color9)]" />
-          <span className="mt-2 text-3xl">Entries</span>
+          <HiListBullet className="h-12 w-8 text-[var(--color4)] mr-2" />
+          {/* <span className="mt-2 text-2xl">Entries</span> */}
         </NavLink>
 
         <NavLink
@@ -39,21 +41,17 @@ function Navlinks() {
               : "flex flex-row"
           }
         >
-          <HiCog6Tooth className="h-14 w-10 text-[var(--color9)]" />
-          <span className="mt-1 text-3xl">Settings</span>
+          <HiCog6Tooth className="h-12 w-8 text-[var(--color4)] mr-2" />
+          {/* <span className="mt-1 text-2xl">Settings</span> */}
         </NavLink>
-
-        <NavLink
-          to="/techstack"
-          className={({ isActive }) =>
-            isActive
-              ? "flex flex-row font-extrabold underline"
-              : "flex flex-row"
-          }
+        <HiArrowRightEndOnRectangle
+          className="h-12 w-8 text-[var(--color4)]"
+          onClick={logout}
+        />
+        <a href="http://localhost:3000/"
         >
-          <HiSparkles className="h-14 w-10 text-[var(--color9)]" />
-          <span className="mt-1 text-3xl">TechStack</span>
-        </NavLink>
+          <HiArrowsRightLeft className="h-12 w-8 text-[var(--color4)] mr-2" />
+        </a>
       </nav>
     </div>
   );

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
   updateLoginPassword,
-  updateLoginUserName,
+  updateLoginUserName,  
 } from "../features/login/loginSlice";
 import { useLogin } from "../hooks/auth/useLogin";
 import { useNavigate } from "react-router-dom";
@@ -25,15 +25,15 @@ function Login() {
     );
   }
   return (
-    <div className="relative font-mono">
+    <div className="relative">
       <img src="landing-picture.png" className="h-screen w-screen" />
-      <div className="absolute top-0 left-[40%] text-white">
-        <h1 className="pb-1 font-sans text-7xl font-bold">Fintrack📊</h1>
-        <p className="text-2xl font-semibold">(Money is always Ultimate😎)</p>
+      <div className="absolute top-0 left-[36%] text-white">
+        <h1 className="pb-1 text-6xl font-bold pt-10">Fintrack📊</h1>
+        {/* <p className="text-2xl font-semibold">(Money is always Ultimate😎)</p> */}
       </div>
-      <div className="absolute top-[20%] right-1/9 h-1/2 w-1/4 rounded-md bg-white text-black shadow-xl">
-        <h1 className="flex justify-center bg-blue-300 pt-5 pb-2 text-3xl font-bold">
-          Login 🗝️
+      <div className="absolute top-[30%] right-[40%] h-1/2 w-1/4 rounded-md bg-white text-black shadow-xl">
+        <h1 className="flex justify-center bg-[var(--color3)] pt-5 pb-2 text-3xl font-bold">
+          Login 
         </h1>
         <div className="flex flex-col gap-2 p-5 text-xl">
           <div className="flex flex-col">
@@ -71,13 +71,13 @@ function Login() {
           ) : (
             <div className="flex flex-row justify-between pt-10">
               <button
-                className="w-fit rounded-lg bg-blue-400 p-1"
+                className="w-fit rounded-lg bg-[var(--color3)] p-1"
                 onClick={() => navigate("/signup")}
               >
                 Sign Up
               </button>
               <button
-                className="w-fit rounded-lg bg-blue-100 p-1"
+                className="w-fit rounded-lg bg-[var(--color3)] p-1"
                 onClick={handleSubmit}
               >
                 Login

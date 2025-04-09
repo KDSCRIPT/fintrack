@@ -64,7 +64,7 @@ function Entry({ data }) {
       </tr>
     );
   return (
-    <tr className="grid grid-cols-7 justify-items-center gap-5 rounded-lg border-2 bg-[var(--color-background)] p-2 font-bold text-[var(--color-text)]">
+    <tr className="ml-3 mr-3  grid grid-cols-7 justify-items-center gap-5 rounded-lg border-2 bg-[var(--color-background)] p-2 font-bold text-[var(--color-text)]">
       <td className="whitespace-nowrap">{entry.id}</td>
 
       <td className="whitespace-nowrap">
